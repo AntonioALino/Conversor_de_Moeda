@@ -1,0 +1,15 @@
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.csproj.AssemblyReference.cache
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.AssemblyInfoInputs.cache
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.AssemblyInfo.cs
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.csproj.CoreCompileInputs.cache
+D:\Conversor_de_Moeda\Conversor_De_Moedas\bin\Debug\net6.0\Conversor_De_Moedas.exe
+D:\Conversor_de_Moeda\Conversor_De_Moedas\bin\Debug\net6.0\Conversor_De_Moedas.deps.json
+D:\Conversor_de_Moeda\Conversor_De_Moedas\bin\Debug\net6.0\Conversor_De_Moedas.runtimeconfig.json
+D:\Conversor_de_Moeda\Conversor_De_Moedas\bin\Debug\net6.0\Conversor_De_Moedas.dll
+D:\Conversor_de_Moeda\Conversor_De_Moedas\bin\Debug\net6.0\Conversor_De_Moedas.pdb
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.dll
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\refint\Conversor_De_Moedas.dll
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.pdb
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\Conversor_De_Moedas.genruntimeconfig.cache
+D:\Conversor_de_Moeda\Conversor_De_Moedas\obj\Debug\net6.0\ref\Conversor_De_Moedas.dll
