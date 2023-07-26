@@ -1,87 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+
 public class Conversor
 {
+    static private List<string> opcoesMoeda = new List<string>();
+
+
+
+    static private Dictionary<int, float> moedas = new();
+
+    static Conversor() {
+        moedas.Add(1, 5.24f);
+        moedas.Add(2, 4.74f);
+        moedas.Add(3, 3.58f);
+        moedas.Add(4, 6.11f);
+        opcoesMoeda.Add("Digite 1 para fazer orçamento com euro");
+        opcoesMoeda.Add("Digite 2 para fazer orçamento com dolar");
+        opcoesMoeda.Add("Digite 3 para fazer orçamento com dolar canadense");
+        opcoesMoeda.Add("Digite 4 para fazer orçamento com libra");
+    }
+    static private string haveBudget { get; set; }
     static void Main(string[] args)
-    {
-        
-        
-        
+    {     
 
-        int orçamento;
-        string opcao;
-     
-        Console.WriteLine("Você deseja fazer orçamento?");
-        opcao = Console.ReadLine(); 
-        
-        if (opcao == "sim") {
+        Introducao();
 
-        Dinheiro();
-
-        DigiteOpcoes();
-
-        
-
-           
-
-        } else
-        {
-            Console.WriteLine("Muito obrigado!");
-        } 
-
-
-
-       
-
-               
-       
     }
     static void DigiteOpcoes()
-    {
-        
-        List<object> moedas = new List<object>();
-
-        moedas.Add(ValordasMoedas());
-
-
-        Console.WriteLine("Digite 1 para fazer orçamento com euro");
-        Console.WriteLine("Digite 2 para fazer orçamento com dolar");
-        Console.WriteLine("Digite 3 para fazer orçamento com dolar canadense");
-        Console.WriteLine("Digite 4 para fazer orçamento com libra");
-        Console.WriteLine("Digite 5 para registrar uma moeda e seu valor");
+    {   
+        for(int i = 0; i < opcoesMoeda.Count; i++)
+        {
+            Console.WriteLine(opcoesMoeda[i]);
+        }
+        Console.WriteLine("Digite registrar para registrar uma moeda e seu valor");
+        Console.WriteLine("Digite sair para voltar ao menu principal");
 
         Console.Write("Digite a opcao que voce deseja escolher\n");
-        int opcaoEscolhida = int.Parse(Console.ReadLine());
+        string opcaoEscolhida = Console.ReadLine().ToString();
+        int numeroInt;
 
-        switch(opcaoEscolhida)
-        {
-            case 1:
-                if (opcaoEscolhida== 1) {
-                    Console.WriteLine(Dinheiro() * euro);
-                } break;
-                case 2:
-                if (opcaoEscolhida == 2)
-                {
-                    Console.WriteLine(Dinheiro() * dolar);
-                }
-                break;
-                case 3:
-                if (opcaoEscolhida == 3)
-                {
-                    Console.WriteLine(Dinheiro() * dolarCand);
-                }
-                break;
-                case 4:
-                if (opcaoEscolhida == 4)
-                {
-                    Console.WriteLine(Dinheiro() * libra);
-                }
-                break;
-                case 5: RegistrarMoeda();
-                break;
-            default: Console.WriteLine("Não existe essa função.");
-                break;
+            if (int.TryParse(opcaoEscolhida, out numeroInt)) {
+                if (numeroInt <= opcoesMoeda.Count) { 
+                Console.WriteLine(Dinheiro() * moedas[int.Parse(opcaoEscolhida)]); 
+            }
+            else
+            {
+                Console.WriteLine("Não existe essa função.");
+            }
         }
+            
+               else if (opcaoEscolhida == "registrar")
+        {
+            RegistrarMoeda();
+        } else if (opcaoEscolhida == "sair")
+        {
+            Introducao();
+        } else
+        {
+            Console.WriteLine("Não existe essa função.");
+        }
+
     }
     static void RegistrarMoeda()
     {
@@ -92,6 +71,12 @@ public class Conversor
 
         Console.WriteLine("Digite o valor da moeda em relação a reais.");
         float valorMoeda = float.Parse(Console.ReadLine());
+        int count = moedas.Count + 1;
+        moedas.Add(count, valorMoeda);
+
+        opcoesMoeda.Add($"Digite {count} para fazer orçamento com {nomeMoeda}");
+        
+        Introducao();
 
 
     }
@@ -104,9 +89,28 @@ public class Conversor
 
         return dinheiro;
     }
-    static void ValorDasMoedas()
+        static void Introducao()
     {
-        float euro =  
-    } 
+            
+            Console.WriteLine("Você deseja fazer orçamento?");
+            haveBudget = Console.ReadLine();
+
+        haveBudget = haveBudget.ToUpper();
+
+        if (haveBudget == "SIM")
+        {
+            Dinheiro();
+            DigiteOpcoes();
+
+        } else
+        {
+            Console.WriteLine("Ok, muito obrigado");
+        }
+       
+
+
+        
+    }
 }   
+
 
